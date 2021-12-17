@@ -98,7 +98,7 @@ public class TestListener implements ISuiteListener, ITestListener {
 				(String) SplunkHelper.getQAFDriver().getCapabilities().getCapability("windTunnelReportUrl"));
 
 		SplunkHelper.getCollector().reporting.put("reportiumReport",
-				QuantumReportiumListener.getReportiumClient().getReportUrl());
+				com.quantum.listeners.QuantumReportiumListener.getReportClient().getReportUrl());
 
 		SplunkHelper.getCollector().submitReporting(testResult.getMethod().getMethodName());
 
